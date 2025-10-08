@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Projects - The Corncastic Org</title></head>
-<body style="background:#0d1117; color:#e6edf3; font-family:Poppins,sans-serif; text-align:center; padding:2rem;">
-  <a href="index.html" style="color:#00aaff; text-decoration:none;">⬅ Back to Home</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - The Corncastic Org</title>
+  <style>
+    body {
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { color: #00aaff; font-size: 3rem; margin-bottom: 2rem; }
+    .projects {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .card {
+      background: #161b22;
+      width: 250px;
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px #00aaff88;
+    }
+    .card h2 { color: #00aaff; margin-bottom: 1rem; }
+    .card p { font-size: 0.95rem; color: #a8b2d1; }
+  </style>
+</head>
+<body>
+  <a href="index.html" style="color:#00aaff;">⬅ Back</a>
   <h1>Our Projects</h1>
-  <p>Explore our innovative apps and digital experiences built with creativity and purpose.</p>
+  <div class="projects">
+    <div class="card">
+      <h2>DailyLog</h2>
+      <p>An interactive productivity tracker that helps users record and manage their daily goals.</p>
+    </div>
+    <div class="card">
+      <h2>EcoVision</h2>
+      <p>A sustainability-focused app that rewards eco-friendly actions in communities.</p>
+    </div>
+    <div class="card">
+      <h2>NeuraFlow</h2>
+      <p>Our AI-powered design assistant that transforms ideas into layouts within seconds.</p>
+    </div>
+  </div>
 </body>
 </html>
