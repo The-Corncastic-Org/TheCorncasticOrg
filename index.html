@@ -1,68 +1,115 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Corncastic Org</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0d1117;
+      background: linear-gradient(135deg, #0d1117, #1b2735);
       color: #e6edf3;
-      text-align: center;
+      overflow-x: hidden;
     }
     nav {
-      background: #161b22;
-      padding: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 3rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(6px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      color: #00aaff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
       gap: 2rem;
     }
     nav a {
-      color: #00aaff;
+      color: #e6edf3;
       text-decoration: none;
-      font-weight: 600;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #66d9ff;
+      color: #00aaff;
     }
-    .content {
-      padding: 6rem 2rem;
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
     }
     h1 {
-      font-size: 2.8rem;
+      font-size: 3.5rem;
       color: #00aaff;
-      margin-bottom: 0.5rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00aaff; }
+      to { text-shadow: 0 0 30px #00aaff, 0 0 60px #0088cc; }
     }
     p {
-      font-size: 1.2rem;
+      margin-top: 1rem;
       max-width: 600px;
-      margin: auto;
+      font-size: 1.2rem;
       color: #a8b2d1;
     }
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background: #00aaff;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      background: #0099dd;
+    }
     footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem;
+      background: #0d1117;
       color: #6e7681;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+    <div class="logo">🌐 Corncastic Org</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
-  <div class="content">
-    <h1>🌐 The Corncastic Org</h1>
-    <p>We build interactive and innovative app designs for a connected future.</p>
+  <div class="hero">
+    <h1>Innovating Digital Experiences</h1>
+    <p>At The Corncastic Org, we craft interactive and meaningful apps, websites, and digital designs that make technology human again.</p>
+    <a href="projects.html"><button class="btn">Explore Our Work</button></a>
   </div>
 
-  <footer>© 2025 The Corncastic Org</footer>
+  <footer>© 2025 The Corncastic Org | Designed with creativity & code 💡</footer>
 </body>
 </html>
