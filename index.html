@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Corncastic Org | Innovative Web & App Development</title>
-<meta name="description" content="The Corncastic Org builds creative, interactive, and user-focused digital experiences. We specialize in modern website and app development that blends design and innovation.">
-<meta name="keywords" content="Corncastic, web development, app design, creative tech, modern websites, software innovation">
-<meta name="author" content="The Corncastic Org">
-<meta name="robots" content="index, follow">
+  <title>The Corncastic Org | Innovative Web & App Development</title>
+  <meta name="description" content="The Corncastic Org builds creative, interactive, and user-focused digital experiences. We specialize in modern website and app development that blends design and innovation.">
+  <meta name="keywords" content="Corncastic, web development, app design, creative tech, modern websites, software innovation">
+  <meta name="author" content="The Corncastic Org">
+  <meta name="robots" content="index, follow">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0d1117, #1b2735);
       color: #e6edf3;
       overflow-x: hidden;
     }
+
+    /* Navbar */
     nav {
       background: rgba(0, 0, 0, 0.3);
       padding: 1rem 3rem;
@@ -30,25 +37,55 @@
       width: 100%;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 0 20px #00aaff22;
     }
-    nav .logo {
+
+    /* Logo */
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 50px;
+      width: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #00aaff66;
+    }
+
+    .logo-text {
       color: #00aaff;
       font-size: 1.5rem;
       font-weight: 700;
+      letter-spacing: 0.5px;
     }
+
+    /* Nav Links */
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
     }
+
     nav a {
       color: #e6edf3;
       text-decoration: none;
-      transition: color 0.3s;
+      font-weight: 500;
+      transition: color 0.3s, text-shadow 0.3s;
     }
+
     nav a:hover {
       color: #00aaff;
+      text-shadow: 0 0 10px #00aaff99;
     }
+
+    /* Hero Section */
     .hero {
       height: 100vh;
       display: flex;
@@ -58,21 +95,26 @@
       text-align: center;
       padding: 2rem;
     }
+
     h1 {
       font-size: 3.5rem;
       color: #00aaff;
       animation: glow 2s ease-in-out infinite alternate;
     }
+
     @keyframes glow {
       from { text-shadow: 0 0 10px #00aaff; }
       to { text-shadow: 0 0 30px #00aaff, 0 0 60px #0088cc; }
     }
+
     p {
       margin-top: 1rem;
       max-width: 600px;
       font-size: 1.2rem;
       color: #a8b2d1;
+      line-height: 1.6;
     }
+
     .btn {
       margin-top: 2rem;
       padding: 0.8rem 1.6rem;
@@ -82,24 +124,57 @@
       color: #fff;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .btn:hover {
       transform: scale(1.1);
       background: #0099dd;
+      box-shadow: 0 0 15px #00aaff66;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       background: #0d1117;
       color: #6e7681;
       font-size: 0.9rem;
+      border-top: 1px solid #1b2735;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .btn {
+        padding: 0.6rem 1.2rem;
+      }
     }
   </style>
 </head>
+
 <body>
+  <!-- Navigation with Logo -->
   <nav>
-    <div class="logo">🌐 Corncastic Org</div>
+    <div class="nav-left">
+      <img src="images/logo.png" alt="Corncastic Org Logo" class="logo-img">
+      <div class="logo-text">Corncastic Org</div>
+    </div>
+
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -108,12 +183,16 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <div class="hero">
     <h1>Innovating Digital Experiences</h1>
     <p>At The Corncastic Org, we craft interactive and meaningful apps, websites, and digital designs that make technology human again.</p>
     <a href="projects.html"><button class="btn">Explore Our Work</button></a>
   </div>
 
-  <footer>© 2025 The Corncastic Org | Designed with creativity & code 💡</footer>
+  <!-- Footer -->
+  <footer>
+    © 2025 The Corncastic Org | Designed with creativity & code 💡
+  </footer>
 </body>
 </html>
